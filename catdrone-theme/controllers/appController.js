@@ -24,7 +24,14 @@ app.controller("IndexCtrl", function($scope) {
 .controller("TestimonialCtrl", function($scope, $http) {
 	$http.get("https://api.myjson.com/bins/1ufqm")
 		.success(function(response) {
-			$scope.testimonials = response;
+			$scope.testimonials = [];
+			var count = 0;
+			angular.forEach(response, function(value, key) {
+				if(count == 0) {
+					$scope.testimonials.push(response[key]);
+					count++;
+				}
+			});
 		});
 })
 
