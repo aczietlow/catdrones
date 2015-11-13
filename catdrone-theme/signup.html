@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="findMyCatApp">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Signup - FindMyCat</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body ng-controller="IndexCtrl">
+
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="#top"  onclick = $("#menu-close").click(); >Start Bootstrap</a>
+            </li>
+            <li>
+                <a href="#top" onclick = $("#menu-close").click(); >Home</a>
+            </li>
+            <li>
+                <a href="#about" onclick = $("#menu-close").click(); >About</a>
+            </li>
+            <li>
+                <a href="#services" onclick = $("#menu-close").click(); >Services</a>
+            </li>
+            <li>
+                <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
+            </li>
+            <li>
+                <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1>Signup</h1>
+            <br>
+        </div>
+    </header>
+
+    <!-- Services -->
+    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+    <section id="services" class="services bg-primary">
+        <div class="container">
+          <form>
+             <h3>Profile</h3>
+            <div class="form-group">
+              <label for="FirstName">First Name</label>
+              <input type="text" class="form-control" id="FirstName" placeholder="Jane">
+            </div>
+            <div class="form-group">
+              <label for="LastName">Last Name</label>
+              <input type="text" class="form-control" id="LastName" placeholder="Doe">
+            </div>
+            <div class="form-group">
+              <label for="PhysicalAddress">Physical Address</label>
+              <input type="text" class="form-control" id="PhysicalAddress" placeholder="101 Cat Drive">
+            </div>
+            <div class="form-group">
+              <label for="PhysicalAddress2">Physical Address 2</label>
+              <input type="text" class="form-control" id="PhysicalAddress2" placeholder="Apt 2">
+            </div>
+            <div class="form-group">
+              <label for="City">City</label>
+              <input type="text" class="form-control" id="City" placeholder="San Francisco">
+            </div>
+            <div class="form-group">
+              <label for="State">State</label>
+              <input type="text" class="form-control" id="State" placeholder="Califorina">
+            </div>
+            <div class="form-group">
+              <label for="Zip">Zip</label>
+              <input type="number" class="form-control" id="Zip" placeholder="Zip">
+            </div>
+            <div class="form-group">
+              <label for="Phone">Phone</label>
+              <input type="tel" class="form-control" id="Phone" placeholder="555-555-5555">
+            </div>
+
+            <h3>Cat Profile</h3>
+
+            <div class="form-group">
+              <label for="CatName">Name</label>
+              <input type="text" class="form-control" id="CatName" placeholder="Fluffy">
+            </div>
+            <div class="form-group">
+              <label for="Color">Color</label>
+              <input type="text" class="form-control" id="Color" placeholder="Black">
+            </div>
+            <div class="form-group">
+              <label for="Weight">Weight in pounds</label>
+              <input type="numbers" class="form-control" id="Weight" placeholder="6">
+            </div>
+            <div class="form-group">
+              <label for="FavoriteTreat">Favorite treat</label>
+              <input type="text" class="form-control" id="FavoriteTreat" placeholder="Cat nip">
+            </div>
+
+
+            <h3>Physical Return Address</h3>
+
+            <div class="form-group">
+              <label for="ContactSame">Same as Owner contact info</label>
+              <input type="checkbox" class="form-control" id="ContactSame">
+            </div>
+            <div class="form-group">
+              <label for="ReturnAddress">Return Address</label>
+              <input type="text" class="form-control" id="ReturnAddress" placeholder="101 Cat Drive">
+            </div>
+            <div class="form-group">
+              <label for="ReturnAddress2">Return Address 2</label>
+              <input type="text" class="form-control" id="ReturnAddress2" placeholder="Apt 2">
+            </div>
+            <div class="form-group">
+              <label for="ReturnCity">City</label>
+              <input type="text" class="form-control" id="ReturnCity" placeholder="San Francisco">
+            </div>
+            <div class="form-group">
+              <label for="ReturnState">State</label>
+              <input type="text" class="form-control" id="ReturnState" placeholder="Califorina">
+            </div>
+            <div class="form-group">
+              <label for="ReturnZip">Zip</label>
+              <input type="number" class="form-control" id="ReturnZip" placeholder="Zip">
+            </div>
+            <div class="form-group">
+              <label for="AddAnother">Add another cat?</label>
+              <input type="checkbox" class="form-control" id="AddAnother">
+            </div>
+
+            <h3>Billing Info</h3>
+
+            <div class="form-group">
+              <label for="BillingFirstName">First Name</label>
+              <input type="text" class="form-control" id="BillingFirstName" placeholder="Jane">
+            </div>
+            <div class="form-group">
+              <label for="BillingLastName">Last Name</label>
+              <input type="text" class="form-control" id="BillingLastName" placeholder="Doe">
+            </div>
+            <div class="form-group">
+              <label for="BillingAddress">Billing Address</label>
+              <input type="text" class="form-control" id="BillingAddress" placeholder="101 Cat Drive">
+            </div>
+            <div class="form-group">
+              <label for="BillingAddress2">Billing Address 2</label>
+              <input type="text" class="form-control" id="BillingAddress2" placeholder="Apt 2">
+            </div>
+            <div class="form-group">
+              <label for="BillingCity">City</label>
+              <input type="text" class="form-control" id="BillingCity" placeholder="San Francisco">
+            </div>
+            <div class="form-group">
+              <label for="BillingState">State</label>
+              <input type="text" class="form-control" id="BillingState" placeholder="Califorina">
+            </div>
+            <div class="form-group">
+              <label for="BillingZip">Zip</label>
+              <input type="number" class="form-control" id="BillingZip" placeholder="Zip">
+            </div>
+            <div class="form-group">
+              <label for="ContactPhone">Contact Phone</label>
+              <input type="tel" class="form-control" id="ContactPhone" placeholder="555-555-5555">
+            </div>
+            <h3>Credit Card</h3>
+            <div class="form-group">
+              <label for="Credit">Credit Card Number</label>
+              <input type=text class="form-control" id="Credit">
+            </div>
+            <div class="form-group">
+              <label for="Month">Expiration Month / Year</label>
+              <input type="number">
+              <input type="date">
+            </div>
+            <div class="form-group">
+              <label for="CVC">CVC</label>
+              <input type="number" class="form-control" id="CVC" placeholder="123">
+            </div>
+            <div class="form-group">
+              <label for="Agree">Agree to terms and services</label>
+              <input type="checkbox" class="form-control" id="Agree">
+            </div>
+            <button type="submit" class="btn btn-default">Join</button>
+          </form><!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Callout -->
+    <aside class="callout">
+        <div class="text-vertical-center">
+            <h1>Vertically Centered Text</h1>
+        </div>
+    </aside>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h2>Our Work</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                    <a href="#" class="btn btn-dark">View More Items</a>
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Call to Action -->
+    <aside class="call-to-action bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3>The buttons below are impossible to resist.</h3>
+                    <a href="#" class="btn btn-lg btn-light">Click Me!</a>
+                    <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Map -->
+    <section id="contact" class="map">
+        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+        <br />
+        <small>
+            <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
+        </small>
+        </iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>Start Bootstrap</strong>
+                    </h4>
+                    <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
+                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.1/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/appController.js"></script>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
+
+</body>
+
+</html>
