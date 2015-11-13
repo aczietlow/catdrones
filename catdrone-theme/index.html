@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Stylish Portfolio - Start Bootstrap Theme</title>
+    <title>Get My Cat Back</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -38,7 +38,7 @@
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-                <a href="#top"  onclick = $("#menu-close").click(); >Start Bootstrap</a>
+                <a href="#top"  onclick = $("#menu-close").click(); >Get My Cat Back</a>
             </li>
             <li>
                 <a href="#top" onclick = $("#menu-close").click(); >Home</a>
@@ -50,16 +50,7 @@
                 <a href="#blogs" onclick = $("#menu-close").click(); >Blogs</a>
             </li>
             <li>
-                <a href="#profiles" onclick = $("#menu-close").click(); >Profiles</a>
-            </li>
-            <li>
-                <a href="#services" onclick = $("#menu-close").click(); >Services</a>
-            </li>
-            <li>
-                <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
-            </li>
-            <li>
-                <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
+                <a href="signup.html" onclick = $("#menu-close").click(); >Signup</a>
             </li>
         </ul>
     </nav>
@@ -67,71 +58,12 @@
     <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center">
-            <h1>Start Bootstrap</h1>
-            <h3>Free Bootstrap Themes &amp; Templates</h3>
+            <h1>Get My Cat Back</h1>
+            <h3>It’s a cold world. Purrtect your pet.</h3>
             <br>
-            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+            <a href="signup.html" class="btn btn-dark btn-lg">Signup</a>
         </div>
     </header>
-
-    <!-- About -->
-    <section id="about" class="about" ng-controller="ProfileCtrl">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-                    <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
-                </div>
-            </div>
-            <!-- /.row -->
-
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div ng-repeat="profile in profiles">
-                        <div class="profile-image"><img src="{{ profile.Picture }}" /></div>
-                        <h2 class="profile-name">{{ profile.Name }}</h2>
-                        <p class="profile-bio">{{ profile.Bio }}</p>
-                    </div>
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-    <!-- Blogs -->
-    <section id="blogs" class="blogs" ng-controller="BlogCtrl">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div ng-repeat="blog in blogs">
-                        <p class="blog-date">{{ blog.Date }}</p>
-                        <h2 class="blog-title">{{ blog.Title }}</h2>
-                        <p class="blog-description">{{ blog.Teaser }}</p>
-                    </div>
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-    <!-- Blogs -->
-    <section id="podcasts" class="podcasts" ng-controller="PodcastCtrl">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <img src="http://www.momswhothink.com/images/stories/baby-names/female-cat-names.jpg" />
-                    <div ng-repeat="podcast in podcasts">
-                        <p>{{ podcast.Date }}</p>
-                        <h2 class="podcast-title"><a href="{{ podcast['Audio URL'] }}">{{ podcast.Title }}</a></h2>
-                    </div>
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
 
     <!-- Profiles -->
     <section id="testimonials" class="testimonials" ng-controller="TestimonialCtrl">
@@ -152,50 +84,53 @@
 
     <!-- Services -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="products" class="products bg-primary" ng-controller="ProductCtrl">
+    <section id="services" class="services bg-primary">
         <div class="container">
             <div class="row text-center">
-                <div class="col-lg-5 col-lg-offset-1">
-                    <h2>Microchips</h2>
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2>Our Services</h2>
                     <hr class="small">
                     <div class="row">
-                        <div class="col-md-12 col-sm-6" ng-repeat="productFirst in productsFirst">
+                        <div class="col-md-4 col-sm-6">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-cloud fa-stack-1x text-primary"></i>
-                                </span>
-                                <div class="product-image"><img src="{{ productFirst.Picture }}" width="50%" /></div>
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-cloud fa-stack-1x text-primary"></i>
+                            </span>
                                 <h4>
-                                    <strong>{{ productFirst.Title }}</strong>
+                                    <strong>Microchip Pet-nology</strong>
                                 </h4>
-                                <p>{{ productFirst.Description }}</p>
+                                <p>Our microchip with built-in GPS tracking promises peace of mind for cat owners. The microchip can be implanted by a veterinarian or local animal shelter. In this simple, painless procedure a licensed technician injects the chip with a syringe and records the chip's unique ID. No anesthetic is required.</p>
                                 <a href="#" class="btn btn-light">Buy Now</a>
                             </div>
                         </div>
-                    </div>
-                    <!-- /.row (nested) -->
-                </div>
-                <!-- /.col-lg-10 -->
-
-                <div class="col-lg-5 col-lg-offset-1">
-                    <h2>Drone Home</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-6" ng-repeat="productLast in productsLast">
+                        <div class="col-md-4 col-sm-6">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-cloud fa-stack-1x text-primary"></i>
-                                </span>
-                                <div class="product-image"><img src="{{ productLast.Picture }}" width="50%" /></div>
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
+                            </span>
                                 <h4>
-                                    <strong>{{ productLast.Title }}</strong>
+                                    <strong>​*24/7 Customer Support*​</strong>
                                 </h4>
-                                <p>{{ productLast.Description }}</p>
+                                <p>Connect with a member of our Cat Support Team any time at 1-800-FINDMYCAT. We look forward to supporting your cat’s droneward bound journey.</p>
                                 <a href="#" class="btn btn-light">Buy Now</a>
                             </div>
                         </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-compass fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>DroneHome</strong>
+                                </h4>
+                                <p>With our DroneHome Kitty Carrier, your cat’s comfort is our highest priority. Our DroneHome technology has undergone rigorous testing to ensure a safe and comfortable transportation experience for your furry friend, attaining the American Humane Society Seal of Approval.</p>
+                                <a href="#" class="btn btn-light">Buy Now</a>
+                            </div>
+                        </div>
+                        
                     </div>
                     <!-- /.row (nested) -->
                 </div>
@@ -219,13 +154,18 @@
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6" ng-controller="PodcastCtrl">
                             <div class="podcast-item">
                                 <h2 class="text-center">Podcast</h2>
                                 <hr class="small">
                                 <a href="#">
                                     <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
                                 </a>
+                                <div ng-repeat="podcast in podcasts">
+                                    <audio src="{{ podcast['Audio URL'] }}" controls="controls">
+                                    </audio>
+                                    {{ podcast['Audio URL'] }}
+                                </div>
                             </div>
                         </div>
                         <div class="blogs col-md-6" ng-controller="BlogCtrl">
@@ -267,14 +207,26 @@
         </div>
     </aside>
 
-    <!-- Map -->
-    <section id="contact" class="map">
-        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-        <br />
-        <small>
-            <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-        </small>
-        </iframe>
+    <!-- Profile -->
+    <section id="profile" class="profile" ng-controller="ProfileCtrl">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6 text-center">
+                    <h2>About Us</h2>
+                    <hr class="small">
+                    <span ng-repeat="profile in profiles">
+                        <span class="profile-image" style="padding-left:10px;"><img src="{{ profile.Picture }}" /></span>
+                    </span>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div style="height:100px;"></div>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis posuere libero, in imperdiet enim. Mauris rutrum enim ut tempor consequat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis augue ex, hendrerit id convallis vitae, tincidunt et massa. Sed urna est, ullamcorper eget euismod nec, tincidunt id sem. Sed imperdiet nec ex id sodales. Curabitur hendrerit justo non nisi consectetur vulputate. In ultrices facilisis velit, eu maximus urna placerat et.</div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
     </section>
 
     <!-- Footer -->
@@ -282,12 +234,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Start Bootstrap</strong>
+                    <h4><strong>Get My Cat Back</strong>
                     </h4>
                     <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
                     <ul class="list-unstyled">
                         <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a>
+                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:info@getmycatback.com">info@getmycatback.com</a>
                         </li>
                     </ul>
                     <br>
@@ -303,7 +255,7 @@
                         </li>
                     </ul>
                     <hr class="small">
-                    <p class="text-muted">Copyright &copy; Your Website 2014</p>
+                    <p class="text-muted">Copyright &copy; Get My Cat Back 2015</p>
                 </div>
             </div>
         </div>
