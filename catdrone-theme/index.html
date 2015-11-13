@@ -69,7 +69,7 @@
     </header>
 
     <!-- About -->
-    <section id="about" class="about" ng-controller="BlogCtrl">
+    <section id="about" class="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -78,12 +78,6 @@
                 </div>
             </div>
             <!-- /.row -->
-
-            <div class="row">
-                <div ng-repeat="blog in blogs">
-                    <div class="blog-title">{{ blog.Title }}</div>
-                </div>
-            </div>
         </div>
         <!-- /.container -->
     </section>
@@ -170,41 +164,35 @@
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Our Work</h2>
-                    <hr class="small">
+                <div class="col-lg-10 col-lg-offset-1">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="portfolio-item">
+                            <div class="podcast-item">
+                                <h2 class="text-center">Podcast</h2>
+                                <hr class="small">
                                 <a href="#">
                                     <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
                                 </a>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
+                        <div class="blogs col-md-6" ng-controller="BlogCtrl">
+                            <h2 class="text-center">Blog</h2>
+                            <hr class="small">
+                            <div class="blog-item">
                                 <a href="#">
                                     <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
                                 </a>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
-                                </a>
+                            <div ng-repeat="blog in blogs | limitTo:1">
+                                <h3 class="blog-title">{{blog.Title}}</h3>
+                                <div class="blog-teaser">{{blog.Teaser}}</div>
+                                <div class="text-right">
+                                    <a href="" class="btn btn-dark">Read More...</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <!-- /.row (nested) -->
-                    <a href="#" class="btn btn-dark">View More Items</a>
                 </div>
                 <!-- /.col-lg-10 -->
             </div>
