@@ -170,11 +170,11 @@
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
+                <div class="col-lg-10 col-lg-offset-1">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="podcast-item">
-                                <h2>Podcast</h2>
+                                <h2 class="text-center">Podcast</h2>
                                 <hr class="small">
                                 <a href="#">
                                     <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
@@ -182,7 +182,7 @@
                             </div>
                         </div>
                         <div class="blogs col-md-6" ng-controller="BlogCtrl">
-                            <h2>Blog</h2>
+                            <h2 class="text-center">Blog</h2>
                             <hr class="small">
                             <div class="blog-item">
                                 <a href="#">
@@ -191,9 +191,10 @@
                             </div>
                             <div class="row">
                                 <div ng-repeat="blog in blogs | limitTo:1">
+                                    <h3 class="blog-title">{{blog.Title}}</h3>
                                     <div class="blog-teaser">{{blog.Teaser}}</div>
                                     <div class="text-right">
-                                        <a href="#" class="btn btn-dark">Read More...</a>
+                                        <a href="" class="btn btn-dark">Read More...</a>
                                     </div>
                                 </div>
                             </div>
