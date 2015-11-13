@@ -12,7 +12,12 @@ app.controller("IndexCtrl", function($scope) {
 .controller("ProfileCtrl", function($scope, $http) {
 	$http.get("https://api.myjson.com/bins/3ocnm")
 		.success(function(response) {
-			$scope.profiles = response;
+			$scope.profiles = [];
+			angular.forEach(response, function(value, key) {
+				if(value['Team #'] === 1) {
+					$scope.profiles.push(response[key]);
+				}
+			});
 		});
 })
 
