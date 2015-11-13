@@ -168,8 +168,7 @@
                                     <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
                                 </a>
                                 <div ng-repeat="podcast in podcasts">
-                                    <audio controls="controls">
-                                        <source src="{{ podcast['Audio URL'] }}" type="audio/mpeg">
+                                    <audio src="{{ podcast['Audio URL'] }}" controls="controls">
                                     </audio>
                                     {{ podcast['Audio URL'] }}
                                 </div>
