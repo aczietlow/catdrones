@@ -23,6 +23,13 @@ app.controller("IndexCtrl", function($scope) {
 		});
 })
 
+.controller("PodcastCtrl", function($scope, $http) {
+	$http.get("https://api.myjson.com/bins/56gq6")
+		.success(function(response) {
+			$scope.podcasts = response;
+		});
+})
+
 .controller("ProductCtrl", function($scope, $http) {
 	$http.get("https://api.myjson.com/bins/2x0mm")
 		.success(function(response) {
