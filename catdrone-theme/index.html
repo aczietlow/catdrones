@@ -65,63 +65,6 @@
         </div>
     </header>
 
-    <!-- About -->
-    <section id="about" class="about" ng-controller="ProfileCtrl">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                </div>
-            </div>
-            <!-- /.row -->
-
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div ng-repeat="profile in profiles">
-                        <div class="profile-image"><img src="{{ profile.Picture }}" /></div>
-                        <h2 class="profile-name">{{ profile.Name }}</h2>
-                        <p class="profile-bio">{{ profile.Bio }}</p>
-                    </div>
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-    <!-- Blogs -->
-    <section id="blogs" class="blogs" ng-controller="BlogCtrl">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div ng-repeat="blog in blogs">
-                        <p class="blog-date">{{ blog.Date }}</p>
-                        <h2 class="blog-title">{{ blog.Title }}</h2>
-                        <p class="blog-description">{{ blog.Teaser }}</p>
-                    </div>
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-    <!-- Blogs -->
-    <section id="podcasts" class="podcasts" ng-controller="PodcastCtrl">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <img src="http://www.momswhothink.com/images/stories/baby-names/female-cat-names.jpg" />
-                    <div ng-repeat="podcast in podcasts">
-                        <p>{{ podcast.Date }}</p>
-                        <h2 class="podcast-title"><a href="{{ podcast['Audio URL'] }}">{{ podcast.Title }}</a></h2>
-                    </div>
-                </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
     <!-- Profiles -->
     <section id="testimonials" class="testimonials" ng-controller="TestimonialCtrl">
         <div class="container">
@@ -211,13 +154,18 @@
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6" ng-controller="PodcastCtrl">
                             <div class="podcast-item">
                                 <h2 class="text-center">Podcast</h2>
                                 <hr class="small">
                                 <a href="#">
                                     <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
                                 </a>
+                                <div ng-repeat="podcast in podcasts">
+                                    <audio src="{{ podcast['Audio URL'] }}" controls="controls">
+                                    </audio>
+                                    {{ podcast['Audio URL'] }}
+                                </div>
                             </div>
                         </div>
                         <div class="blogs col-md-6" ng-controller="BlogCtrl">
@@ -259,14 +207,26 @@
         </div>
     </aside>
 
-    <!-- Map -->
-    <section id="contact" class="map">
-        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-        <br />
-        <small>
-            <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-        </small>
-        </iframe>
+    <!-- Profile -->
+    <section id="profile" class="profile" ng-controller="ProfileCtrl">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6 text-center">
+                    <h2>About Us</h2>
+                    <hr class="small">
+                    <span ng-repeat="profile in profiles">
+                        <span class="profile-image" style="padding-left:10px;"><img src="{{ profile.Picture }}" /></span>
+                    </span>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div style="height:100px;"></div>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis posuere libero, in imperdiet enim. Mauris rutrum enim ut tempor consequat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis augue ex, hendrerit id convallis vitae, tincidunt et massa. Sed urna est, ullamcorper eget euismod nec, tincidunt id sem. Sed imperdiet nec ex id sodales. Curabitur hendrerit justo non nisi consectetur vulputate. In ultrices facilisis velit, eu maximus urna placerat et.</div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
     </section>
 
     <!-- Footer -->
