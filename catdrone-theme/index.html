@@ -181,7 +181,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="blogs col-md-6" ng-controller="BlogCtrl">
                             <h2>Blog</h2>
                             <hr class="small">
                             <div class="blog-item">
@@ -189,16 +189,14 @@
                                     <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
                                 </a>
                             </div>
-                            <section ng-controller="BlogCtrl">
-                                <div class="row">
-                                    <div ng-repeat="blog in blogs | limitTo:1">
-                                        <div class="blog-teaser">{{blog.Teaser}}</div>
-                                        <div class="text-right">
-                                            <a href="#" class="btn btn-dark">Read More...</a>
-                                        </div>
+                            <div class="row">
+                                <div ng-repeat="blog in blogs | limitTo:1">
+                                    <div class="blog-teaser">{{blog.Teaser}}</div>
+                                    <div class="text-right">
+                                        <a href="#" class="btn btn-dark">Read More...</a>
                                     </div>
                                 </div>
-                            </section>
+                            </div>
                         </div>
                     </div>
                     <!-- /.row (nested) -->
