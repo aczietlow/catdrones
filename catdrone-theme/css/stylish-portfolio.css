@@ -6,6 +6,14 @@
 
 /* Global Styles */
 
+a {
+  color: #cc3f02;
+}
+
+.fa-stack-1x {
+  color: #cc3f02;
+}
+
 html,
 body {
     width: 100%;
@@ -155,7 +163,7 @@ hr.small {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url(../img/bg.jpg) no-repeat center center scroll;
+    background: url(../img/bg.png) no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -172,6 +180,7 @@ hr.small {
 
 .services {
     padding: 50px 0;
+    background-color: #cc3f02;
 }
 
 .service-item {
@@ -194,19 +203,23 @@ hr.small {
 
 /* Portfolio */
 
-.portfolio {
+.portfolio,
+.logo {
     padding: 50px 0;
 }
 
-.portfolio-item {
+.portfolio-item,
+.logo-item {
     margin-bottom: 30px;
 }
 
-.img-portfolio {
+.img-portfolio,
+.img-logo {
     margin: 0 auto;
 }
 
-.img-portfolio:hover {
+.img-portfolio:hover,
+.img-logo:hover {
     opacity: 0.8;
 }
 
@@ -214,6 +227,7 @@ hr.small {
 
 .call-to-action {
     padding: 50px 0;
+    background-color: #cc3f02;
 }
 
 .call-to-action .btn {
