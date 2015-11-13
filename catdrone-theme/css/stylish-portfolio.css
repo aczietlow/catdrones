@@ -194,19 +194,23 @@ hr.small {
 
 /* Portfolio */
 
-.portfolio {
+.portfolio,
+.logo {
     padding: 50px 0;
 }
 
-.portfolio-item {
+.portfolio-item,
+.logo-item {
     margin-bottom: 30px;
 }
 
-.img-portfolio {
+.img-portfolio,
+.img-logo {
     margin: 0 auto;
 }
 
-.img-portfolio:hover {
+.img-portfolio:hover,
+.img-logo:hover {
     opacity: 0.8;
 }
 
