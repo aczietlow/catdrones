@@ -47,6 +47,12 @@
                 <a href="#about" onclick = $("#menu-close").click(); >About</a>
             </li>
             <li>
+                <a href="#blogs" onclick = $("#menu-close").click(); >Blogs</a>
+            </li>
+            <li>
+                <a href="#profiles" onclick = $("#menu-close").click(); >Profiles</a>
+            </li>
+            <li>
                 <a href="#services" onclick = $("#menu-close").click(); >Services</a>
             </li>
             <li>
@@ -69,12 +75,74 @@
     </header>
 
     <!-- About -->
-    <section id="about" class="about">
+    <section id="about" class="about" ng-controller="ProfileCtrl">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
                     <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div ng-repeat="profile in profiles">
+                        <div class="profile-image"><img src="{{ profile.Picture }}" /></div>
+                        <h2 class="profile-name">{{ profile.Name }}</h2>
+                        <p class="profile-bio">{{ profile.Bio }}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Blogs -->
+    <section id="blogs" class="blogs" ng-controller="BlogCtrl">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div ng-repeat="blog in blogs">
+                        <p class="blog-date">{{ blog.Date }}</p>
+                        <h2 class="blog-title">{{ blog.Title }}</h2>
+                        <p class="blog-description">{{ blog.Teaser }}</p>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Blogs -->
+    <section id="podcasts" class="podcasts" ng-controller="PodcastCtrl">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <img src="http://www.momswhothink.com/images/stories/baby-names/female-cat-names.jpg" />
+                    <div ng-repeat="podcast in podcasts">
+                        <p>{{ podcast.Date }}</p>
+                        <h2 class="podcast-title"><a href="{{ podcast['Audio URL'] }}">{{ podcast.Title }}</a></h2>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Profiles -->
+    <section id="testimonials" class="testimonials" ng-controller="TestimonialCtrl">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div ng-repeat="testimonial in testimonials">
+                        <div class="testimonial-image"><img src="{{ testimonial.Picture }}" /></div>
+                        <p class="testimonial-name">{{ testimonial.Name }}</p>
+                        <p class="testimonial-testimonial">{{ testimonial.Testimonial }}</p>
+                    </div>
                 </div>
             </div>
             <!-- /.row -->
@@ -84,63 +152,48 @@
 
     <!-- Services -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="services" class="services bg-primary">
+    <section id="products" class="products bg-primary" ng-controller="ProductCtrl">
         <div class="container">
             <div class="row text-center">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Our Services</h2>
+                <div class="col-lg-5 col-lg-offset-1">
+                    <h2>Microchips</h2>
                     <hr class="small">
                     <div class="row">
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-12 col-sm-6" ng-repeat="productFirst in productsFirst">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-cloud fa-stack-1x text-primary"></i>
-                            </span>
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-cloud fa-stack-1x text-primary"></i>
+                                </span>
+                                <div class="product-image"><img src="{{ productFirst.Picture }}" width="50%" /></div>
                                 <h4>
-                                    <strong>Service Name</strong>
+                                    <strong>{{ productFirst.Title }}</strong>
                                 </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
+                                <p>{{ productFirst.Description }}</p>
+                                <a href="#" class="btn btn-light">Buy Now</a>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-6">
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+
+                <div class="col-lg-5 col-lg-offset-1">
+                    <h2>Drone Home</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-6" ng-repeat="productLast in productsLast">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-compass fa-stack-1x text-primary"></i>
-                            </span>
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-cloud fa-stack-1x text-primary"></i>
+                                </span>
+                                <div class="product-image"><img src="{{ productLast.Picture }}" width="50%" /></div>
                                 <h4>
-                                    <strong>Service Name</strong>
+                                    <strong>{{ productLast.Title }}</strong>
                                 </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Service Name</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-shield fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Service Name</strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
+                                <p>{{ productLast.Description }}</p>
+                                <a href="#" class="btn btn-light">Buy Now</a>
                             </div>
                         </div>
                     </div>
