@@ -38,7 +38,7 @@
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-                <a href="#top"  onclick = $("#menu-close").click(); >Start Bootstrap</a>
+                <a href="#top"  onclick = $("#menu-close").click(); >Get My Cat Back</a>
             </li>
             <li>
                 <a href="#top" onclick = $("#menu-close").click(); >Home</a>
@@ -50,16 +50,7 @@
                 <a href="#blogs" onclick = $("#menu-close").click(); >Blogs</a>
             </li>
             <li>
-                <a href="#profiles" onclick = $("#menu-close").click(); >Profiles</a>
-            </li>
-            <li>
-                <a href="#services" onclick = $("#menu-close").click(); >Services</a>
-            </li>
-            <li>
-                <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
-            </li>
-            <li>
-                <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
+                <a href="signup.html" onclick = $("#menu-close").click(); >Signup</a>
             </li>
         </ul>
     </nav>
@@ -150,50 +141,53 @@
 
     <!-- Services -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="products" class="products bg-primary" ng-controller="ProductCtrl">
+    <section id="services" class="services bg-primary">
         <div class="container">
             <div class="row text-center">
-                <div class="col-lg-5 col-lg-offset-1">
-                    <h2>Microchips</h2>
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2>Our Services</h2>
                     <hr class="small">
                     <div class="row">
-                        <div class="col-md-12 col-sm-6" ng-repeat="productFirst in productsFirst">
+                        <div class="col-md-4 col-sm-6">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-cloud fa-stack-1x text-primary"></i>
-                                </span>
-                                <div class="product-image"><img src="{{ productFirst.Picture }}" width="50%" /></div>
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-cloud fa-stack-1x text-primary"></i>
+                            </span>
                                 <h4>
-                                    <strong>{{ productFirst.Title }}</strong>
+                                    <strong>Microchip Pet-nology</strong>
                                 </h4>
-                                <p>{{ productFirst.Description }}</p>
+                                <p>Our microchip with built-in GPS tracking promises peace of mind for cat owners. The microchip can be implanted by a veterinarian or local animal shelter. In this simple, painless procedure a licensed technician injects the chip with a syringe and records the chip's unique ID. No anesthetic is required.</p>
                                 <a href="#" class="btn btn-light">Buy Now</a>
                             </div>
                         </div>
-                    </div>
-                    <!-- /.row (nested) -->
-                </div>
-                <!-- /.col-lg-10 -->
-
-                <div class="col-lg-5 col-lg-offset-1">
-                    <h2>Drone Home</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-6" ng-repeat="productLast in productsLast">
+                        <div class="col-md-4 col-sm-6">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-cloud fa-stack-1x text-primary"></i>
-                                </span>
-                                <div class="product-image"><img src="{{ productLast.Picture }}" width="50%" /></div>
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
+                            </span>
                                 <h4>
-                                    <strong>{{ productLast.Title }}</strong>
+                                    <strong>​*24/7 Customer Support*​</strong>
                                 </h4>
-                                <p>{{ productLast.Description }}</p>
+                                <p>Connect with a member of our Cat Support Team any time at 1-800-FINDMYCAT. We look forward to supporting your cat’s droneward bound journey.</p>
                                 <a href="#" class="btn btn-light">Buy Now</a>
                             </div>
                         </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-compass fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>DroneHome</strong>
+                                </h4>
+                                <p>With our DroneHome Kitty Carrier, your cat’s comfort is our highest priority. Our DroneHome technology has undergone rigorous testing to ensure a safe and comfortable transportation experience for your furry friend, attaining the American Humane Society Seal of Approval.</p>
+                                <a href="#" class="btn btn-light">Buy Now</a>
+                            </div>
+                        </div>
+                        
                     </div>
                     <!-- /.row (nested) -->
                 </div>
@@ -280,12 +274,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Start Bootstrap</strong>
+                    <h4><strong>Get My Cat Back</strong>
                     </h4>
                     <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
                     <ul class="list-unstyled">
                         <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:name@example.com">name@example.com</a>
+                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:info@getmycatback.com">info@getmycatback.com</a>
                         </li>
                     </ul>
                     <br>
@@ -301,7 +295,7 @@
                         </li>
                     </ul>
                     <hr class="small">
-                    <p class="text-muted">Copyright &copy; Your Website 2014</p>
+                    <p class="text-muted">Copyright &copy; Get My Cat Back 2015</p>
                 </div>
             </div>
         </div>
