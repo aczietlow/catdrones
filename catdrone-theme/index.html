@@ -162,9 +162,9 @@
                                     <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
                                 </a>
                                 <div ng-repeat="podcast in podcasts">
+                                    {{ podcast.Title }}
                                     <audio src="{{ podcast['Audio URL'] }}" controls="controls">
                                     </audio>
-                                    {{ podcast['Audio URL'] }}
                                 </div>
                             </div>
                         </div>
