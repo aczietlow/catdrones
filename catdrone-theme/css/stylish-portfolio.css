@@ -148,6 +148,14 @@ hr.small {
     margin: 5px 5px 0 0;
 }
 
+.testimonial-image {
+  float: left;
+  margin-bottom: 40px;
+}
+
+.profile-image img {
+      margin: 5px 0;
+}
 /* Header */
 
 .header {
@@ -160,6 +168,7 @@ hr.small {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    margin-bottom: 40px;
 }
 
 /* About */
@@ -170,8 +179,13 @@ hr.small {
 
 /* Services */
 
+a {
+  color: #cc3f02;
+}
+
 .services {
     padding: 50px 0;
+    background: #cc3f02;
 }
 
 .service-item {
@@ -214,6 +228,7 @@ hr.small {
 
 .call-to-action {
     padding: 50px 0;
+    background: #cc3f02;
 }
 
 .call-to-action .btn {
