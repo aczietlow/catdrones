@@ -75,12 +75,23 @@
     </header>
 
     <!-- About -->
-    <section id="about" class="about">
+    <section id="about" class="about" ng-controller="ProfileCtrl">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
                     <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
+                </div>
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div ng-repeat="profile in profiles">
+                        <div class="profile-image"><img src="{{ profile.Picture }}" /></div>
+                        <h2 class="profile-name">{{ profile.Name }}</h2>
+                        <p class="profile-bio">{{ profile.Bio }}</p>
+                    </div>
                 </div>
             </div>
             <!-- /.row -->
@@ -105,15 +116,15 @@
         <!-- /.container -->
     </section>
 
-    <!-- Profiles -->
-    <section id="profiles" class="profiles" ng-controller="ProfileCtrl">
+    <!-- Blogs -->
+    <section id="podcasts" class="podcasts" ng-controller="PodcastCtrl">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <div ng-repeat="profile in profiles">
-                        <div class="profile-image"><img src="{{ profile.Picture }}" /></div>
-                        <h2 class="profile-name">{{ profile.Name }}</h2>
-                        <p class="profile-bio">{{ profile.Bio }}</p>
+                    <img src="http://www.momswhothink.com/images/stories/baby-names/female-cat-names.jpg" />
+                    <div ng-repeat="podcast in podcasts">
+                        <p>{{ podcast.Date }}</p>
+                        <h2 class="podcast-title"><a href="{{ podcast['Audio URL'] }}">{{ podcast.Title }}</a></h2>
                     </div>
                 </div>
             </div>
